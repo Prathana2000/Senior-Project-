@@ -2,6 +2,7 @@ import { useState } from "react";
 import React from "react";
 import "./FormComponent.scss";
 import Axios from "axios";
+import { IoTrashBin, IoAdd } from "react-icons/io5";
 // import { uuid } from 'uuidv4';
 
 /*ผู้ใช้งานกรอกข้อมูลที่ใช้ในการจำแนกคลาส*/
@@ -95,12 +96,12 @@ function FromComponent() {
                 type="button"
                 onClick={() => handleRemove(index)}
               >
-                -
+                <IoTrashBin size={20}/>
               </button>
             )}
             {index === texts.length - 1 && index < 9 && (
               <button className="add-btn" type="button" onClick={handleAdd}>
-                +
+                <IoAdd  size={20}/>
               </button>
             )}
           </div>
