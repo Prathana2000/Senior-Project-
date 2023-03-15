@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, {useState} from 'react';
 import { FiCode, FiMenu, FiX } from "react-icons/fi";
-import './Header.css'
+import './Header.scss'
 
 function Header() {
     const [click, setClick] = useState(false);

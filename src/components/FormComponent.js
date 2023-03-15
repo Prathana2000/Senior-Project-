@@ -1,6 +1,6 @@
 import { useState } from "react";
 import React from "react";
-import "./FormComponent.css";
+import "./FormComponent.scss";
 import Axios from "axios";
 // import { uuid } from 'uuidv4';
 

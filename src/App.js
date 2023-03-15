@@ -1,5 +1,5 @@
 import Header from "./components/Header";
-import "./App.css";
+import "./App.scss";
 import Banner from "./components/Banner";
 import FromComponent from "./components/FormComponent";
 // import ResultComponent from "./components/ResultComponent";
