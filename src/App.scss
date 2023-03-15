@@ -1,8 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Prompt&display=swap");
 
+@font-face {
+  font-family: "DBHeaventnBold";
+  src: local("DBHeaventnBold"),
+   url("./fonts/DB_Heavent_Bd.ttf") format("truetype");
+  // font-weight: bold;
+  }
+
 * {
   box-sizing: border-box;
-  font-family: "Prompt", sans-serif;
+  font-family: "DBHeaventnBold", "Prompt", sans-serif;
 }
 
 .App {
