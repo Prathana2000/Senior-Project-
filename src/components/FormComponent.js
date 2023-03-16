@@ -48,19 +48,59 @@ function FromComponent() {
     setNumberInput(newValues.length);
   };
 
+  const isMockUpMode = true;
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     setNumberInput("");
     setTexts([""]);
     console.log(texts);
     //รับ-ส่งข้อมูลระหว่าง client และ server และแสดงผลลัพธ์ที่ resultcomponent
-    Axios.post("http://localhost:3001/submit", { data: texts }).then(
-      (response) => {
-        //setTest(response.data);
-        //console.log(test);
-      }
-    );
+    var dataResponse = queryData();
   };
+
+  const queryData = () => {
+    try {
+      if (isMockUpMode) {
+        console.log(mockUpData);
+        return mockUpData;
+      } else {
+        Axios.post("http://localhost:3001/submit", { data: texts }).then(
+          (response) => {
+            //setTest(response.data);
+            console.log(response);
+            return response.data || [];
+          }
+        );
+      }
+    } catch (ex) {
+      console.error(ex);
+    }
+  };
+
+  const mockUpData =
+    ([
+      {
+        INPUT: "เขาโอนเงินมาเยอะมากเกินไป",
+        CLASS_NO: 5,
+        CLASS_NAME: "เงินฝาก",
+        PROBABILITY: 87,
+      },
+    ],
+    [
+      {
+        INPUT: "เขาโอนเงินมา",
+        CLASS_NO: 4,
+        CLASS_NAME: "MyMo",
+        PROBABILITY: 87,
+      },
+      {
+        INPUT: "เขาโอนเงินมาไม่ไหว",
+        CLASS_NO: 6,
+        CLASS_NAME: "สินเชื่อ",
+        PROBABILITY: 50,
+      },
+    ]);
 
   return (
     <div className="form">
@@ -96,12 +136,12 @@ function FromComponent() {
                 type="button"
                 onClick={() => handleRemove(index)}
               >
-                <IoTrashBin size={20}/>
+                <IoTrashBin size={20} />
               </button>
             )}
             {index === texts.length - 1 && index < 9 && (
               <button className="add-btn" type="button" onClick={handleAdd}>
-                <IoAdd  size={20}/>
+                <IoAdd size={20} />
               </button>
             )}
           </div>

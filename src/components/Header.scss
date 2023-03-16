@@ -19,13 +19,16 @@
   font-weight: bold;
   font-size: 2rem;
   margin-left: 10px;
+  padding-left: 1rem;
 }
 .header .menu {
   display: flex;
   list-style-type: none;
+  margin-bottom: 0px;
 }
 .header .menu li {
   padding-right: 2rem;
+  font-size: 20px;
 }
 .header .menu li a {
   text-decoration: none;
