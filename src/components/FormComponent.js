@@ -105,7 +105,7 @@ function FromComponent() {
                 <IoAdd size={20} />
               </button>
             )}
-            {result?.length > 0 && <ResultLabel result={result[index]} />}
+            {result[index] && <ResultLabel result={result[index]} />}
           </div>
         ))}
         <br />

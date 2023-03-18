@@ -1,6 +1,6 @@
 import Axios from "axios";
 
-export const isMockUpMode = true;
+const isMockUpMode = false;
 
 const mockUpData =
   ([
@@ -32,12 +32,12 @@ export const queryData = async (texts) => {
       console.log(mockUpData);
       return mockUpData;
     } else {
-      const response = await Axios.post("http://localhost:3001/submit", {
+      const response = await Axios.post("https://bank-feedback-classifier-api.herokuapp.com/submit", {
         data: texts,
       });
       //setTest(response.data);
       console.log(response);
-      return response.data || [];
+      return response?.data?.data || [];
     }
   } catch (ex) {
     console.error(ex);
