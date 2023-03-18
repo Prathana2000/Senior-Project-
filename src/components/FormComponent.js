@@ -80,11 +80,10 @@ function FromComponent() {
         <br />
         {texts.map((text, index) => (
           <div className="text-input" key={index}>
-            <label>
+            <label className="input-layout">
               Text Input {index + 1}:
-              <input
+              <textarea
                 className="text-input-box"
-                type="text"
                 value={text}
                 onChange={(event) =>
                   handleTextChange(index, event.target.value)
