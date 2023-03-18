@@ -52,14 +52,16 @@ function FromComponent() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    setNumberInput("");
-    setTexts([""]);
+    // setNumberInput(0);
+    // setTexts([""]);
     console.log("texts ::: ", texts);
     //รับ-ส่งข้อมูลระหว่าง client และ server และแสดงผลลัพธ์ที่ resultcomponent
     const queryResult = await queryData(texts);
     console.log("queryResult ::: ", queryResult);
     setResult(queryResult);
   };
+
+  const handleClearForm = () => {};
 
   return (
     <div className="form">
@@ -103,12 +105,15 @@ function FromComponent() {
                 <IoAdd size={20} />
               </button>
             )}
-              {result?.length > 0 && <ResultLabel result={result[index]}/>}
+            {result?.length > 0 && <ResultLabel result={result[index]} />}
           </div>
         ))}
         <br />
         <button className="submit-btn" type="submit">
           Submit
+        </button>
+        <button className="submit-btn" onClick={handleClearForm}>
+          Clear
         </button>
         {/* <div>
           {test.map((val, key) => {
