@@ -29,9 +29,14 @@
   position: relative;
 }
 
+.input-layout{
+  flex: 1;
+}
+
 .text-input {
   margin: 5px;
   position: relative;
+  display: flex;
 }
 
 .text-input-box {
