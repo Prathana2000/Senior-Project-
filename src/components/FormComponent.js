@@ -90,6 +90,7 @@ function FromComponent() {
                 }
               />
             </label>
+            <div className="right-container">
             {index > 0 && (
               <button
                 className="remove-btn"
@@ -104,7 +105,9 @@ function FromComponent() {
                 <IoAdd size={20} />
               </button>
             )}
+            </div>
             {result[index] && <ResultLabel result={result[index]} />}
+            
           </div>
         ))}
         <br />

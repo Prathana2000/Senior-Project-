@@ -1,35 +1,36 @@
 import React from "react";
+import "./ResultLabel.scss"
 
 export default function ResultLabel({ result }) {
-  let color = "";
+  let background = "";
   if (result) {
     switch (result.CLASS_NAME) {
       // ['MyMo', 'บัตรและสลากออมสิน', 'สินเชื่อ', 'อื่น ๆ', 'เงินฝาก']
       case "MyMo":
-        color = "red";
+        background = "red";
         break;
       case "บัตรและสลากออมสิน":
-        color = "pink";
+        background = "pink";
         break;
       case "สินเชื่อ":
-        color = "green";
+        background = "green";
         break;
       case "อื่น ๆ":
-        color = "lightgray";
+        background = "lightgray";
         break;
       case "เงินฝาก":
-        color = "yellow";
+        background = "yellow";
         break;
       default:
-        color = "blue";
+        background = "blue";
         break;
     }
   }
 
   return (
-    <div>
-      {result.CLASS_NAME && <div style={{ color }}>{result.CLASS_NAME}</div>}
-      {result.PROBABILITY && <div>{result.PROBABILITY}</div>}
+    <div className="result">
+      {result.CLASS_NAME && <div className="result-class-name" style={{ background }}>{result.CLASS_NAME}</div>}
+      {result.PROBABILITY && <div className="result-probability">{result.PROBABILITY}</div>}
     </div>
   );
 }
