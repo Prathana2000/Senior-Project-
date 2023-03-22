@@ -61,11 +61,15 @@ function FromComponent() {
     setResult(queryResult);
   };
 
-  const handleClearForm = () => {};
+  const handleClearForm = () => {
+    setNumberInput(1);
+    setTexts([""]);
+    setResult([]);
+  };
 
   return (
     <div className="form">
-      <form className="form-con" onSubmit={handleSubmit}>
+      <form className="form-con">
         <label className="input-con">
           Number Input :
           <input
@@ -111,10 +115,10 @@ function FromComponent() {
           </div>
         ))}
         <br />
-        <button className="submit-btn" type="submit">
+        <button className="submit-btn" onClick={handleSubmit}>
           Submit
         </button>
-        <button className="submit-btn" onClick={handleClearForm}>
+        <button className="clear-btn" onClick={handleClearForm}>
           Clear
         </button>
         {/* <div>
