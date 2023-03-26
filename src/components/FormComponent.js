@@ -4,13 +4,13 @@ import "./FormComponent.scss";
 import { IoTrashBin, IoAdd } from "react-icons/io5";
 import { queryData } from "./Api";
 import ResultLabel from "./ResultLabel";
+import {showLoading, hideLoading} from "../App";
 // import { uuid } from 'uuidv4';
 
 /*ผู้ใช้งานกรอกข้อมูลที่ใช้ในการจำแนกคลาส*/
 function FromComponent() {
   const [numberInput, setNumberInput] = useState(1);
   const [texts, setTexts] = useState([""]);
-  const [test, setTest] = useState([]);
   const [result, setResult] = useState([]);
 
   const handleNumberInputChange = (event) => {
@@ -51,6 +51,7 @@ function FromComponent() {
   };
 
   const handleSubmit = async (event) => {
+    showLoading();
     event.preventDefault();
     // setNumberInput(0);
     // setTexts([""]);
@@ -59,6 +60,7 @@ function FromComponent() {
     const queryResult = await queryData(texts);
     console.log("queryResult ::: ", queryResult);
     setResult(queryResult);
+    hideLoading();
   };
 
   const handleClearForm = () => {
@@ -121,11 +123,6 @@ function FromComponent() {
         <button className="clear-btn" onClick={handleClearForm}>
           Clear
         </button>
-        {/* <div>
-          {test.map((val, key) => {
-            return <div key={key}>{val.name}</div>;
-          })}
-        </div> */}
       </form>
     </div>
   );

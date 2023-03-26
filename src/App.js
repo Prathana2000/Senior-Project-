@@ -7,6 +7,11 @@ import FromComponent from "./components/FormComponent";
 function App() {
   return (
     <div className="page">
+      <div className="loading" id="loading">
+        <div className="loading-layout">
+        <div className="loader"></div>
+        </div>
+      </div>
       <Header />
       <Banner />
       <div className="main-page">
@@ -18,3 +23,11 @@ function App() {
 }
 
 export default App;
+
+export const hideLoading = () => {
+  document.getElementById("loading").style.display = "none";
+};
+
+export const showLoading = () => {
+  document.getElementById("loading").style.display = "block";
+};

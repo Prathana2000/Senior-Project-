@@ -4,9 +4,8 @@
 
 .form {
   flex: 2;
-  box-shadow: 0px 2px 3px 1px #323030;
-  padding: 15px 15px 15px;
-  margin: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;  padding: 15px 15px 15px;
+  margin: 15px;
   border-radius: 10px;
   background: #ffffff;
   display: block;
@@ -24,7 +23,7 @@
   margin-left: 5px;
   padding: 3px;
   border: 1px solid rgb(136, 133, 133);
-  border-radius: 15px;
+  border-radius: 0.5rem;
   text-align: center;
   position: relative;
 }
@@ -42,7 +41,7 @@
 .text-input-box {
   margin: 5px;
   width: -webkit-fill-available;
-  border-radius: 10px;
+  border-radius: 0.5rem;
   border: 1px solid rgb(166, 159, 159);
   position: relative;
 }
@@ -57,7 +56,7 @@
   margin: 2px;
   color: rgb(235, 129, 129);
   border: black;
-  border-radius: 20px;
+  border-radius: 0.5rem;
   cursor: pointer;
   position: relative;
 }
@@ -71,7 +70,7 @@
   margin: 2px;
   color: rgb(36, 110, 73);
   border: black;
-  border-radius: 20px;
+  border-radius: 0.5rem;
   cursor: pointer;
   position: relative;
 }
@@ -81,7 +80,7 @@
   margin: 5px;
   color: white;
   border: black;
-  border-radius: 20px;
+  border-radius: 0.5rem;
   padding: 5px 10px;
   cursor: pointer;
   position: relative;
@@ -92,7 +91,7 @@
   margin: 5px;
   color: white;
   border: black;
-  border-radius: 20px;
+  border-radius: 0.5rem;
   padding: 5px 10px;
   cursor: pointer;
   position: relative;
