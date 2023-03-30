@@ -2,17 +2,20 @@
   background: rgb(255, 255, 255);
   height: 10%;
 }
+
 .header .header-con {
   width: 100%;
   margin: 0 auto;
   height: 100%;
 }
-.header .element-con{
+
+.header .element-con {
   display: flex;
   justify-content: space-between;
   height: 100%;
   align-items: center;
 }
+
 .header .logo-container a {
   color: #373737;
   text-decoration: none;
@@ -21,19 +24,23 @@
   margin-left: 10px;
   padding-left: 1rem;
 }
+
 .header .menu {
   display: flex;
   list-style-type: none;
   margin-bottom: 0px;
 }
+
 .header .menu li {
   padding-right: 2rem;
   font-size: 20px;
 }
+
 .header .menu li a {
   text-decoration: none;
   color: #323030;
 }
+
 .header .mobile-menu {
   display: none;
 }
@@ -44,9 +51,11 @@
     color: #2b2b2b;
     font-size: 2rem;
   }
+
   .header {
     padding: 0 2rem;
   }
+
   .header .menu {
     width: 100%;
     height: auto;
@@ -58,6 +67,7 @@
     opacity: 0;
     transition: 0.5s ease;
   }
+
   .header .menu.active {
     background: #f9f9f9;
     left: 0;
@@ -67,9 +77,11 @@
     align-content: center;
     transition: 0.5 ease;
   }
+
   .header .menu li {
     padding-right: 0;
   }
+
   .header .menu-link {
     display: flex;
     align-items: center;
