@@ -65,7 +65,7 @@ function FromComponent() {
   const hideLoading = () => {
     document.getElementById("loading").style.display = "none";
   };
-  
+
   const showLoading = () => {
     document.getElementById("loading").style.display = "block";
   };
@@ -104,23 +104,22 @@ function FromComponent() {
               />
             </label>
             <div className="right-container">
-            {index > 0 && (
-              <button
-                className="remove-btn"
-                type="button"
-                onClick={() => handleRemove(index)}
-              >
-                <IoTrashBin size={20} />
-              </button>
-            )}
-            {index === texts.length - 1 && index < 9 && (
-              <button className="add-btn" type="button" onClick={handleAdd}>
-                <IoAdd size={20} />
-              </button>
-            )}
+              {index > 0 && (
+                <button
+                  className="remove-btn"
+                  type="button"
+                  onClick={() => handleRemove(index)}
+                >
+                  <IoTrashBin size={20} />
+                </button>
+              )}
+              {index === texts.length - 1 && index < 9 && (
+                <button className="add-btn" type="button" onClick={handleAdd}>
+                  <IoAdd size={20} />
+                </button>
+              )}
             </div>
             {result[index] && <ResultLabel result={result[index]} />}
-            
           </div>
         ))}
         <br />
