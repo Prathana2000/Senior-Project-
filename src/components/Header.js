@@ -3,6 +3,7 @@
 import React, {useState} from 'react';
 import { FiCode, FiMenu, FiX } from "react-icons/fi";
 import './Header.scss'
+import { Link } from "react-router-dom";
 
 function Header() {
     const [click, setClick] = useState(false);
@@ -13,11 +14,11 @@ function Header() {
             <div className="header-con">
                 <div className="element-con">
                     <div className="logo-container">
-                    <a href= "#"> Hello <FiCode/></a> 
+                    <Link to="/">HOME</Link>
                     </div>
                     <ul className= {click ? "menu active" : "menu"}>
                         <li className="menu-link" onClick={closeMobileMenu}>
-                            <a href="#">ABOUT</a>
+                        <Link to="/About">ABOUT</Link>
                         </li>
                         <li className="menu-link" onClick={closeMobileMenu}>
                             <a href="#">CONTACT</a>

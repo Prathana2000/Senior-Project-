@@ -4,7 +4,6 @@ import "./FormComponent.scss";
 import { IoTrashBin, IoAdd } from "react-icons/io5";
 import { queryData } from "./Api";
 import ResultLabel from "./ResultLabel";
-import {showLoading, hideLoading} from "../App";
 // import { uuid } from 'uuidv4';
 
 /*ผู้ใช้งานกรอกข้อมูลที่ใช้ในการจำแนกคลาส*/
@@ -61,6 +60,14 @@ function FromComponent() {
     console.log("queryResult ::: ", queryResult);
     setResult(queryResult);
     hideLoading();
+  };
+
+  const hideLoading = () => {
+    document.getElementById("loading").style.display = "none";
+  };
+  
+  const showLoading = () => {
+    document.getElementById("loading").style.display = "block";
   };
 
   const handleClearForm = () => {
