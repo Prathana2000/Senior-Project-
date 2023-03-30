@@ -10,7 +10,6 @@ import ResultLabel from "./ResultLabel";
 function FromComponent() {
   const [numberInput, setNumberInput] = useState(1);
   const [texts, setTexts] = useState([""]);
-  const [test, setTest] = useState([]);
   const [result, setResult] = useState([]);
 
   const handleNumberInputChange = (event) => {
@@ -51,6 +50,7 @@ function FromComponent() {
   };
 
   const handleSubmit = async (event) => {
+    showLoading();
     event.preventDefault();
     // setNumberInput(0);
     // setTexts([""]);
@@ -59,6 +59,15 @@ function FromComponent() {
     const queryResult = await queryData(texts);
     console.log("queryResult ::: ", queryResult);
     setResult(queryResult);
+    hideLoading();
+  };
+
+  const hideLoading = () => {
+    document.getElementById("loading").style.display = "none";
+  };
+  
+  const showLoading = () => {
+    document.getElementById("loading").style.display = "block";
   };
 
   const handleClearForm = () => {
@@ -121,11 +130,6 @@ function FromComponent() {
         <button className="clear-btn" onClick={handleClearForm}>
           Clear
         </button>
-        {/* <div>
-          {test.map((val, key) => {
-            return <div key={key}>{val.name}</div>;
-          })}
-        </div> */}
       </form>
     </div>
   );
