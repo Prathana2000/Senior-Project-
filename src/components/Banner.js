@@ -2,8 +2,8 @@ import React from "react";
 import "./Banner.scss";
 
 let BanData = {
-  title: "......webApp",
-  desc: "webApp description",
+  title: "TM Web Application",
+  desc: "We use machine learning to classify bank complaints.",
 };
 
 function Banner() {

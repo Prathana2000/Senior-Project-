@@ -13,9 +13,12 @@ function Header() {
     <div className="header">
       <div className="header-con">
         <div className="element-con">
-          <div className="logo-container">
-            <Link to="/">HOME</Link>
-          </div>
+          <Link to="/" className="logo">
+            <div className="logo-container">   
+            </div>
+            <div className="home-text">HOME</div>
+          </Link>
+
           <ul className={click ? "menu active" : "menu"}>
             <li className="menu-link" onClick={closeMobileMenu}>
               <Link to="/About">ABOUT</Link>
