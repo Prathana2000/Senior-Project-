@@ -12,6 +12,23 @@
   display: block;
   overflow: auto;
   font-size: 20px;
+
+  .form-con{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .text-input-main {
+    height: 100px;
+    overflow: auto;
+    flex: 1;
+    margin: 7.5px 0;
+  }
+
+  .btn-container{
+    display: flex;
+  }
 }
 
 .input-con {
