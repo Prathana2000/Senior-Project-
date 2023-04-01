@@ -49,17 +49,25 @@ function FromComponent() {
     setNumberInput(newValues.length);
   };
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = (event) => {
     showLoading();
     event.preventDefault();
     // setNumberInput(0);
     // setTexts([""]);
+    callWebService();
+  };
+
+  const callWebService = async () => {
     console.log("texts ::: ", texts);
     //รับ-ส่งข้อมูลระหว่าง client และ server และแสดงผลลัพธ์ที่ resultcomponent
     const queryResult = await queryData(texts);
-    console.log("queryResult ::: ", queryResult);
-    setResult(queryResult);
-    hideLoading();
+    if (queryResult) {
+      console.log("queryResult ::: ", queryResult);
+      setResult(queryResult);
+      hideLoading();
+    } else {
+      callWebService();
+    }
   };
 
   const hideLoading = () => {
