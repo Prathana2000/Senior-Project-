@@ -61,7 +61,7 @@ function FromComponent() {
     console.log("texts ::: ", texts);
     //รับ-ส่งข้อมูลระหว่าง client และ server และแสดงผลลัพธ์ที่ resultcomponent
     const queryResult = await queryData(texts);
-    if (queryResult) {
+    if (queryResult) { //queryResult ได้ผลลัพธ์กลับมา
       console.log("queryResult ::: ", queryResult);
       setResult(queryResult);
       hideLoading();
