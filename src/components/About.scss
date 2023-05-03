@@ -1,0 +1,19 @@
+.about-layout {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+
+    .profile {
+        flex: 1;
+        img{
+            height: 40%;
+            width: auto;
+        }
+        &.one {}
+
+        &.two {}
+
+        &.three {}
+    }
+}
