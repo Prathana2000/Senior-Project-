@@ -21,10 +21,7 @@ function Header() {
 
           <ul className={click ? "menu active" : "menu"}>
             <li className="menu-link" onClick={closeMobileMenu}>
-              <Link to="/About">ABOUT</Link>
-            </li>
-            <li className="menu-link" onClick={closeMobileMenu}>
-              <Link to="/Contact">CONTACT</Link>
+              <Link to="/Contact">Contact Us </Link>
             </li>
           </ul>
           <div className="mobile-menu" onClick={handleClick}>
